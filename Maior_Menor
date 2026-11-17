@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int numero1, numero2;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &numero1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &numero2);
+
+    if (numero1 > numero2) {
+        printf("Maior numero: %d", numero1);
+        printf("Menor numero: %d", numero2);
+    } else if (numero2 > numero1) {
+        printf("Maior numero: %d", numero2);
+        printf("Menor numero: %d", numero1);
+    } else {
+        printf("Numeros iguais");
+    }
+
+    return 0;
+}
