@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    printf("Digite um numero positivo: ");
+    scanf("%d", &numero);
+
+    if (numero > 0) {
+        if (numero % 2 == 0) {
+            printf("O numero e par");
+        } else {
+            printf("O numero e impar");
+        }
+    } else {
+        printf("Digite apenas numeros positivos");
+    }
+
+    return 0;
+}
