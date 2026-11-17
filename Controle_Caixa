@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    float caixa, preco, total, valorFinal;
+    int qtde;
+
+    printf("Digite o valor disponivel no caixa: ");
+    scanf("%f", &caixa);
+
+    printf("Digite a quantidade de produtos: ");
+    scanf("%d", &qtde);
+
+    printf("Digite o preco de cada produto: ");
+    scanf("%f", &preco);
+
+    total = qtde * preco;
+
+    printf("Valor total da compra: R$ %.2f", total);
+
+    if (total > caixa * 0.80) {
+        valorFinal = total * 1.10;
+
+        printf("Forma de pagamento: 3 parcelas");
+        printf("Valor total com juros: R$ %.2f", valorFinal);
+        printf("Valor de cada parcela: R$ %.2f", valorFinal / 3);
+    } else {
+        valorFinal = total * 0.95;
+
+        printf("Forma de pagamento: A vista");
+        printf("Valor com desconto: R$ %.2f", valorFinal);
+    }
+
+    return 0;
+}
